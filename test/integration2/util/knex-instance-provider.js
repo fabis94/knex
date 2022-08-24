@@ -193,6 +193,10 @@ const testConfigs = {
   },
 };
 
+function getDbTestConfig(db) {
+  return testConfigs[db];
+}
+
 function getKnexForDb(db, configOverrides = {}) {
   const config = testConfigs[db];
   return knex({
@@ -205,4 +209,5 @@ module.exports = {
   Db,
   getAllDbs,
   getKnexForDb,
+  getDbTestConfig,
 };

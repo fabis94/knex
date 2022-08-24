@@ -3013,6 +3013,10 @@ export declare namespace Knex {
     stream?: stream.Duplex;
     statement_timeout?: false | number;
     parseInputDatesAsUTC?: boolean;
+    /**
+     * If set, will be used as the default precision for datetime & timestamp columns
+     */
+    defaultDateTimePrecision?: number;
     ssl?: boolean | ConnectionOptions;
     query_timeout?: number;
     keepAliveInitialDelayMillis?: number;
